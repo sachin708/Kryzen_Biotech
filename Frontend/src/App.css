@@ -1,0 +1,48 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 4 columns on large screens */
+  gap: 20px;
+}
+
+.item {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  width: 90%
+}
+
+.mainbox h3, h4{
+  color: rgb(16, 17, 16);
+}
+
+.image{
+  width: 100%;
+  height: 35vh;
+}
+
+.headingtag{
+  color: blue;
+  margin-bottom: 40px;
+  
+}
+
+@media (max-width: 768px) {
+  /* 2 columns on medium-sized screens */
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  /* 1 column on small screens */
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}

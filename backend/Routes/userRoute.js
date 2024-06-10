@@ -10,17 +10,29 @@ const jwtSecret = 'key'
 const route = express();
 route.get("/home", verifyToken, (req, res)=>{
   res.send({msg:"this is the home page"})
-})
+});
+
+route.get('/products', (req, res) => {
+  const query = 'SELECT * FROM products';
+  db.query(query, (err, results) => {
+    if (err) {
+      console.error('Error executing query:', err.message);
+      res.status(500).send('Database error');
+      return;
+    }
+    res.render('index', { data: results });
+  });
+});
 
 route.post('/login', (req, res) => {
-  const { username, password } = req.body;
+  const { email, password } = req.body;
 
-  if (!username || !password) {
+  if (!email || !password) {
     return res.status(400).send('Please fill all fields');
   }
 
   // Check if user exists
-  db.query('SELECT * FROM userlogins WHERE username = ?', [username], async (err, results) => {
+  db.query('SELECT * FROM userlogins WHERE email = ?', [email], async (err, results) => {
     if (err) throw err;
 
     if (results.length === 0) {
