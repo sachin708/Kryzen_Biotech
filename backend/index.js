@@ -1,18 +1,31 @@
 
 const express = require("express");
+
 const dotenv = require("dotenv");
-const { connectDB } = require("./config/connection");
+const db = require("./config/connection");
+const { route } = require("./Routes/userRoute");
 dotenv.config();
 
 const app = express();
 
+// Middleware
+app.use(express.json());
+
+app.use("/user", route)
+
 const port = process.env.PORT
+
 app.listen(port, async() => {
-    try {
-        await connectDB();
-        console.log("Connected to the DB");
-        console.log(`Server is running on port ${port}`);
-    } catch (err) {
-        console.log(err.message);
+    try{
+     await  db.connect((err) => {
+        if (err) {
+          throw err;
+        }
+        console.log("Connected to the database");
+        console.log(`Server running on port ${port}`);
+      });
+    }catch(err){
+        console.log({err:err.message})
     }
-});
+   
+  });
