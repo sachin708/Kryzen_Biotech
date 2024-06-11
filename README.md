@@ -39,23 +39,22 @@ yarn run dev
 ### File structure
 Briefly describe the folder structure of your project.
 
-ADDA_ASSIGNMENT
-Frontend
-├── node_modules
-├── public/
-│   └── vite.svg
-│
-├── src/
-│   ├── App.js
-|   ├── App.css
-│   ├── BookingForm.jsx
-│   ├── FacilityBooking.jsx
-│   ├── BookingForm.css
-│   ├─  main.jsx
-│   ├── index.css
+kryzenbitech
+├── backend
+│   ├── controllers
+│   ├── models
+│   ├── routes
+│   ├── middleware
 │   └── index.js
-│
-├── .gitignore
-├── package.json
-└── README.md
+└── frontend
+    ├── public
+    ├── src
+    │   ├── components
+    │   ├── pages
+    │   ├── assets
+    │   ├── App.js
+    │   ├── index.js
+    │   └── ...
+    └── package.json
+
     Feel free to modify and expand upon this template as needed to fit your project's specific details and requirements.
