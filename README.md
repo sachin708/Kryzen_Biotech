@@ -1,5 +1,4 @@
 # Kryzen_Biotech
-# Kryzen_Biotech
 
 ### Introduction
 A brief introduction to your project.
