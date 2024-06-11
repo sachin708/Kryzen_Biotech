@@ -21,7 +21,7 @@ const Product = () => {
 
   const fetchdata = async () => {
     try {
-      let res = await fetch("http://localhost:8080/products/products");
+      let res = await fetch("http://localhost:8000/products/products");
       let data = await res.json();
       setLoading(false);
       setData(data);

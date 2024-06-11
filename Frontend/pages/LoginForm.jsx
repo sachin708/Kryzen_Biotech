@@ -1,5 +1,8 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../AuthContext";
 import {
   Box,
   Button,
@@ -12,6 +15,8 @@ import {
 
 const LoginForm = () => {
   const toast = useToast();
+  const navigate = useNavigate();
+  const { login } = useAuth();
 
   const formik = useFormik({
     initialValues: {
@@ -26,15 +31,33 @@ const LoginForm = () => {
         .min(6, "Password must be at least 6 characters")
         .required("Password is required"),
     }),
-    onSubmit: (values) => {
-      // Handle login logic here
-      toast({
-        title: "Login successful.",
-        description: "You have logged in successfully.",
-        status: "success",
-        duration: 5000,
-        isClosable: true,
-      });
+    onSubmit: async (values) => {
+      try {
+        const response = await axios.post(
+          "http://localhost:8000/user/login",
+          values
+        );
+        if (response.status === 200) {
+          login(); // Set authentication state
+          toast({
+            title: "Login successful.",
+            description: "You have logged in successfully.",
+            status: "success",
+            duration: 5000,
+            isClosable: true,
+          });
+          navigate("/products"); // Redirect to products page
+        }
+      } catch (error) {
+        toast({
+          title: "Login failed.",
+          description:
+            error.response?.data?.message || "Invalid email or password.",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+        });
+      }
     },
   });
 
