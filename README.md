@@ -41,7 +41,7 @@ yarn run dev
 ### Folder Structure
 Briefly describe the folder structure of your project.
 
-kryzenbiotech/
+kryzenbiotech
 ├── backend
 │   ├── controllers
 │   ├── models
