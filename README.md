@@ -39,22 +39,23 @@ yarn run dev
 ### File structure
 Briefly describe the folder structure of your project.
 
-kryzenbiotech
-├── backend
-│   ├── controllers
-│   ├── models
-│   ├── routes
-│   ├── middleware
+ADDA_ASSIGNMENT
+Frontend
+├── node_modules
+├── public/
+│   └── vite.svg
+│
+├── src/
+│   ├── App.js
+|   ├── App.css
+│   ├── BookingForm.jsx
+│   ├── FacilityBooking.jsx
+│   ├── BookingForm.css
+│   ├─  main.jsx
+│   ├── index.css
 │   └── index.js
-├── frontend
-│    ├── public
-│    ├── src
-│    │   ├── components
-│    │   ├── pages
-│    │   ├── assets
-│    │   ├── App.js
-│    │   ├── index.js
-│    │   └── ...
-│   └── package.json
-└── Readme file
+│
+├── .gitignore
+├── package.json
+└── README.md
     Feel free to modify and expand upon this template as needed to fit your project's specific details and requirements.
