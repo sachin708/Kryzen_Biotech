@@ -48,15 +48,15 @@ kryzenbiotech
 │   ├── routes
 │   ├── middleware
 │   └── index.js
-└── frontend
-    ├── public
-    ├── src
-    │   ├── components
-    │   ├── pages
-    │   ├── assets
-    │   ├── App.js
-    │   ├── index.js
-    │   └── ...
-    └── package.json
-
+├── frontend
+│    ├── public
+│    ├── src
+│    │   ├── components
+│    │   ├── pages
+│    │   ├── assets
+│    │   ├── App.js
+│    │   ├── index.js
+│    │   └── ...
+│   └── package.json
+└── Readme file
     Feel free to modify and expand upon this template as needed to fit your project's specific details and requirements.
