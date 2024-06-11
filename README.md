@@ -40,22 +40,9 @@ yarn run dev
 Briefly describe the folder structure of your project.
 
 kryzenbitech
-├── backend
-│   ├── controllers
-│   ├── models
-│   ├── routes
-│   ├── middleware
-│   └── index.js
-└── frontend
-    ├── public
-    ├── src
-    │   ├── components
-    │   ├── pages
-    │   ├── assets
-    │   ├── App.js
-    │   ├── index.js
-    │   └── ...
-    └── package.json
+Frontend
+├── node_modules
+├── public
 ```
 
     Feel free to modify and expand upon this template as needed to fit your project's specific details and requirements.
