@@ -1,44 +1,4 @@
 
-// const express = require("express");
-// const path = require('path');
-// const db = require("../config/connection");
-
-// const productRoute = express();
-
-// // Set EJS as the templating engine
-// productRoute.set('view engine', 'ejs');
-// productRoute.set('views', path.join(__dirname, 'views'));
-
-// // Home route to fetch and display products
-// productRoute.get('/products', (req, res) => {
-//     const query = 'SELECT * FROM products';
-//     db.query(query, (err, results) => {
-//       if (err) {
-//         console.error('Error executing query:', err.message);
-//         return res.status(500).send('Database error');
-//       }
-//       res.send({ data: results });
-//     });
-//   });
-
-//   productRoute.post('/add', (req, res) => {
-//     const { id, image, name, price, type, description } = req.body;
-//     const query = 'INSERT INTO products (id, image, name, price, type, description) VALUES (?, ?, ?, ?, ?, ?)';
-//     db.query(query, [id, image, name, price, type, description], (err, results) => {
-//       if (err) {
-//         console.error('Error executing query:', err.message);
-//         return res.status(500).send('Database error');
-//       }
-//       res.send({ data: results });
-//     });
-//   });
-
-  
-
-
-// module.exports = {
-//     productRoute
-// }
 
 const express = require("express");
 const db = require("../config/connection");
