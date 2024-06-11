@@ -1,5 +1,4 @@
 # Kryzen_Biotech
-# Kryzen_Biotech
 
 ### Introduction
 A brief introduction to your project.
@@ -37,8 +36,7 @@ yarn run dev
 
 ### Project Presentation Video
 
-
-### Folder Structure
+### File structure
 Briefly describe the folder structure of your project.
 
 kryzenbiotech
