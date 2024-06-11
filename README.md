@@ -41,8 +41,7 @@ Briefly describe the folder structure of your project.
 
 kryzenbitech
 Frontend
-├── node_modules
-├── public
+backend
 ```
 
     Feel free to modify and expand upon this template as needed to fit your project's specific details and requirements.
