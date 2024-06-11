@@ -42,18 +42,18 @@ yarn run dev
 Briefly describe the folder structure of your project.
 
 kryzenbiotech/
-├── backend/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
+├── backend
+│   ├── controllers
+│   ├── models
+│   ├── routes
+│   ├── middleware
 │   └── index.js
-└── frontend/
-    ├── public/
-    ├── src/
-    │   ├── components/
-    │   ├── pages/
-    │   ├── assets/
+└── frontend
+    ├── public
+    ├── src
+    │   ├── components
+    │   ├── pages
+    │   ├── assets
     │   ├── App.js
     │   ├── index.js
     │   └── ...
